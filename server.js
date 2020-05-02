@@ -48,10 +48,10 @@ app.post('/medicalReportForm', function (req, res) {
     var ssn=req.body.ssn;
     var addr=req.body.addr;
     var email=req.body.email;
-    var visitDate=req.body.dday;
-    var desease=req.body.point;
-    var deseaseCode=req.body.code;
-    var content=req.body.desc;
+    var visitDate=req.body.visitDate;
+    var desease=req.body.desease;
+    var deseaseCode=req.body.deseaseCode;
+    var content=req.body.content;
     var docterName=req.session.docterName;
     var docterNo=req.session.docterNo;
     console.log(name,ssn,addr,email,visitDate,desease,deseaseCode,content,docterName,docterNo);

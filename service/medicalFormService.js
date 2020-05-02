@@ -45,6 +45,46 @@ module.exports={
               // Get the contract from the network.
               const contract = network.getContract('medicalreport');
           
+              if(name === undefined){
+                  name =  "";                 
+              }
+
+              if(ssn === undefined){
+                ssn = "";
+              }
+
+              if(addr === undefined){
+                addr = "";
+              }
+
+              if(email === undefined){
+                email = "";
+              }
+
+              if(visitDate === undefined){
+                visitDate = "";
+              }
+
+              if(desease === undefined){
+                desease = "";
+              }
+
+              if(deseaseCode === undefined){
+                deseaseCode = "";
+              }
+
+              if(content === undefined){
+                content = "";
+              }
+
+              if(docterName === undefined){
+                  docterName = "";
+              }
+
+              if(docterNo === undefined){
+                docterNo = "";
+              }
+
 	      let pcode="p"+pcodeCount++
               await contract.submitTransaction('createMedicalReport',pcode,name,ssn,addr,email,visitDate,desease,deseaseCode,content,docterName,docterNo);
               console.log('진료 확인서 BlockChain 저장 완료');

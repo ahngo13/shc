@@ -3,30 +3,21 @@ class MedicalReportForm extends React.Component{
     send=()=>{
 
         const data={
-
             name:this.name.value,
-
             ssn:this.ssn.value,
-
             addr:this.addr.value,
-
             email:this.email.value,
-
             visitDate:this.visitDate.value,
-
             desease:this.desease.value,
-
             deseaseCode:this.deseaseCode.value,
-
             content:this.content.value
-
         }
 
         alert(JSON.stringify(data));
 
         
 
-        axios.post('/medicalForm',data)
+        axios.post('/medicalReportForm',data)
 
         .then((response)=>{
 
@@ -215,7 +206,7 @@ class MedicalReportForm extends React.Component{
 
                 </textarea>               
 
-                <input style={input_type_submit} onClick={this.send} type="submit" value="Send"/>
+                <input style={input_type_submit} onClick={this.send} type="button" value="Send"/>
 
                
 
